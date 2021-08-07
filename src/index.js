@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import HomePage from "./pages/homePage";
+import MoviePage from "./pages/movieDetailsPage";
 
 const sample = {
   adult: false,
@@ -10,26 +11,26 @@ const sample = {
     id: 10,
     name: "Star Wars Collection",
     poster_path: "/iTQHKziZy9pAAY4hHEDCGPaOvFC.jpg",
-    backdrop_path: "/d8duYyyC9J5T825Hg7grmaabfxQ.jpg"
+    backdrop_path: "/d8duYyyC9J5T825Hg7grmaabfxQ.jpg",
   },
   budget: 200000000,
   genres: [
     {
       id: 14,
-      name: "Fantasy"
+      name: "Fantasy",
     },
     {
       id: 12,
-      name: "Adventure"
+      name: "Adventure",
     },
     {
       id: 878,
-      name: "Science Fiction"
+      name: "Science Fiction",
     },
     {
       id: 28,
-      name: "Action"
-    }
+      name: "Action",
+    },
   ],
   homepage:
     "https://www.starwars.com/films/star-wars-episode-viii-the-last-jedi",
@@ -46,26 +47,26 @@ const sample = {
       id: 1,
       logo_path: "/o86DbpburjxrqAzEDhXZcyE8pDb.png",
       name: "Lucasfilm",
-      origin_country: "US"
+      origin_country: "US",
     },
     {
       id: 11092,
       logo_path: null,
       name: "Ram Bergman Productions",
-      origin_country: "US"
+      origin_country: "US",
     },
     {
       id: 2,
       logo_path: "/wdrCwmRnLFJhEoH8GSfymY85KHT.png",
       name: "Walt Disney Pictures",
-      origin_country: "US"
-    }
+      origin_country: "US",
+    },
   ],
   production_countries: [
     {
       iso_3166_1: "US",
-      name: "United States of America"
-    }
+      name: "United States of America",
+    },
   ],
   release_date: "2017-12-13",
   revenue: 1332459537,
@@ -73,15 +74,15 @@ const sample = {
   spoken_languages: [
     {
       iso_639_1: "en",
-      name: "English"
-    }
+      name: "English",
+    },
   ],
   status: "Released",
   tagline: "Darkness rises... and light to meet it",
   title: "Star Wars: The Last Jedi",
   video: false,
   vote_average: 7,
-  vote_count: 9692
+  vote_count: 9692,
 };
 
 const movies = [sample, sample, sample];
@@ -89,7 +90,7 @@ const movies = [sample, sample, sample];
 const App = () => {
   return (
     <div className="jumbotron">
-      <HomePage movies={movies} />
+      <MoviePage movie={sample} />
     </div>
   );
 };
